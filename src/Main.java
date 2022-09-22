@@ -58,6 +58,16 @@ public class Main {
         for(double wartosc : pierwiastki){
             System.out.print(wartosc+", ");
         }
-
+        //liczby fibonacciego
+        System.out.println("Liczby Fibonacciego1");
+        ArrayList<Integer> fibo = new ArrayList<>();
+        fibo.add(0);
+        fibo.add(1);
+        int indeks=2;
+        while (fibo.size()<40){
+            fibo.add(fibo.get(indeks-2)+fibo.get(indeks-1));
+            indeks++;
+        }
+        System.out.println(fibo);
     }
 }
