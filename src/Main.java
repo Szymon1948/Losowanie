@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
@@ -41,5 +42,22 @@ public class Main {
                 liczbyPierwsze.add(element);
         }
         System.out.println(liczbyPierwsze);
+
+        //przygotuj listę z 10 liczbami wylosowanym z zakresu od 30 do 60 bez powtorzen
+        HashSet<Integer> zbiorWylosowanych = new HashSet<>();
+        while(zbiorWylosowanych.size()<10){
+            zbiorWylosowanych.add((int)(Math.random()*30+31));
+        }
+        System.out.println(zbiorWylosowanych);
+        //tablica 10 liczb wypełniona pierwiastkami
+        double pierwiastki [] = new double[10];
+        for(int i=0;i<10;i++){
+            pierwiastki[i] = Math.pow(i,0.5);
+        }
+        System.out.println(pierwiastki);
+        for(double wartosc : pierwiastki){
+            System.out.print(wartosc+", ");
+        }
+
     }
 }
